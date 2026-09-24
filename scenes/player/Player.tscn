@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://d34a5c2kttr3l" path="res://assets/sprites/player/avatar.png" id="2_gfjak"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gfjak"]
+radius = 17.0
+height = 46.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1273378771]
 script = ExtResource("1_wr5hl")
@@ -13,6 +15,7 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_gfjak")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1955954556]
+position = Vector2(0, 17)
 shape = SubResource("CapsuleShape2D_gfjak")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=914295874]
