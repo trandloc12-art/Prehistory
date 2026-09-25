@@ -1,21 +1,63 @@
 [gd_scene format=3 uid="uid://co6asu4apb585"]
 
 [ext_resource type="Script" uid="uid://dhsgev144hb3i" path="res://scripts/player/player.gd" id="1_wr5hl"]
-[ext_resource type="Texture2D" uid="uid://b7qsu0b6r1i8d" path="res://icon.svg" id="2_gfjak"]
+[ext_resource type="Texture2D" uid="uid://cwe4debhsqkud" path="res://assets/sprites/player/idle.png" id="2_gfjak"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4kuee"]
+atlas = ExtResource("2_gfjak")
+region = Rect2(0, 0, 416, 717)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_524rm"]
+atlas = ExtResource("2_gfjak")
+region = Rect2(416, 0, 416, 717)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tpg5x"]
+atlas = ExtResource("2_gfjak")
+region = Rect2(832, 0, 416, 717)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3xxp"]
+atlas = ExtResource("2_gfjak")
+region = Rect2(1248, 0, 416, 717)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3r14f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4kuee")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_524rm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tpg5x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3xxp")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gfjak"]
 radius = 17.0
-height = 46.0
+height = 38.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1273378771]
 script = ExtResource("1_wr5hl")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=450236426]
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("2_gfjak")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1395604432]
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_3r14f")
+autoplay = "default"
+frame_progress = 0.9534175
+speed_scale = 0.2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1955954556]
-position = Vector2(0, 17)
+position = Vector2(0, 14)
 shape = SubResource("CapsuleShape2D_gfjak")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=914295874]
