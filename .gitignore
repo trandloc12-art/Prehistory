@@ -1,3 +1,56 @@
-# Godot 4+ specific ignores
+# =============================================================================
+# .gitignore cho project Godot 4.x (DinoExpedition)
+# =============================================================================
+
+# Thư mục cache/import nội bộ của Godot — tự sinh lại, không cần commit
 .godot/
-/android/
+
+# Bản build cũ (Godot 3.x) — giữ phòng trường hợp còn sót
+.import/
+
+# File export cấu hình chứa đường dẫn máy cục bộ / keystore riêng
+# (bỏ comment dòng dưới nếu KHÔNG muốn chia sẻ preset export với team)
+# export_presets.cfg
+
+# Thư mục build/export ra file thực thi game
+export/
+builds/
+*.exe
+*.pck
+*.apk
+*.aab
+*.zip
+
+# Mono / C# (nếu project có dùng C# bên cạnh GDScript)
+.mono/
+data_*/
+mono_crash.*.json
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Log / file tạm của hệ điều hành & editor
+*.log
+*.tmp
+*~
+
+# VS Code (giữ vài file cấu hình chung nếu muốn chia sẻ, bỏ comment nếu cần)
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# JetBrains / Rider (nếu ai đó dùng)
+.idea/
+
+# Thư mục addon tải qua Asset Lib có thể exclude nếu quản lý riêng
+# (thường KHÔNG nên ignore vì addon cần commit để build đúng)
+# addons/
+
+# File backup tự động của Godot editor
+*.tmp.gd
+*.gd.uid
