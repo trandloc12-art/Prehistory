@@ -1,21 +1,131 @@
 [gd_scene format=3 uid="uid://co6asu4apb585"]
 
 [ext_resource type="Script" uid="uid://dhsgev144hb3i" path="res://scripts/player/player.gd" id="1_wr5hl"]
-[ext_resource type="Texture2D" uid="uid://b7qsu0b6r1i8d" path="res://icon.svg" id="2_gfjak"]
+[ext_resource type="Texture2D" uid="uid://gjhdwhwxgor8" path="res://assets/sprites/player/character_front_idle (1).png" id="2_524rm"]
+[ext_resource type="Texture2D" uid="uid://beh4pdm2kf2wg" path="res://assets/sprites/player/character_side.png" id="3_tpg5x"]
+[ext_resource type="Texture2D" uid="uid://c2qklg340h70w" path="res://assets/sprites/player/c96e7188-a80a-4c31-ad9d-1d2b8171e804.png" id="4_524rm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_npwbq"]
+atlas = ExtResource("2_524rm")
+region = Rect2(0, 0, 416, 717)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v42im"]
+atlas = ExtResource("2_524rm")
+region = Rect2(416, 0, 416, 717)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pn6s4"]
+atlas = ExtResource("2_524rm")
+region = Rect2(832, 0, 416, 717)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7oing"]
+atlas = ExtResource("2_524rm")
+region = Rect2(1248, 0, 416, 717)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5stf6"]
+atlas = ExtResource("3_tpg5x")
+region = Rect2(0, 0, 496, 793)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_180ig"]
+atlas = ExtResource("3_tpg5x")
+region = Rect2(496, 0, 496, 793)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_20koh"]
+atlas = ExtResource("3_tpg5x")
+region = Rect2(992, 0, 496, 793)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ov1oi"]
+atlas = ExtResource("3_tpg5x")
+region = Rect2(1488, 0, 496, 793)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tpg5x"]
+atlas = ExtResource("4_524rm")
+region = Rect2(0, 0, 495, 793)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3xxp"]
+atlas = ExtResource("4_524rm")
+region = Rect2(495, 0, 495, 793)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rn7t0"]
+atlas = ExtResource("4_524rm")
+region = Rect2(990, 0, 495, 793)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qjgm"]
+atlas = ExtResource("4_524rm")
+region = Rect2(1485, 0, 495, 793)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3r14f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_npwbq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v42im")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pn6s4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7oing")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5stf6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_180ig")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_20koh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ov1oi")
+}],
+"loop": 1,
+"name": &"right_side",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tpg5x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3xxp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rn7t0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8qjgm")
+}],
+"loop": 1,
+"name": &"walk_side",
+"speed": 8.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gfjak"]
 radius = 17.0
-height = 46.0
+height = 38.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1273378771]
 script = ExtResource("1_wr5hl")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=450236426]
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("2_gfjak")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1395604432]
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_3r14f")
+autoplay = "walk_side"
+frame_progress = 0.16805753
+speed_scale = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1955954556]
-position = Vector2(0, 17)
+position = Vector2(0, 14)
 shape = SubResource("CapsuleShape2D_gfjak")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=914295874]

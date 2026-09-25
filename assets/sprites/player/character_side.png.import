@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1db5memvr75p"
-path="res://.godot/imported/moment_player.png-d8e73501e9dad4889a7e4589331fcfb8.ctex"
+uid="uid://beh4pdm2kf2wg"
+path="res://.godot/imported/character_side.png-bce3f74bb432e229d1c0c9d4b638c91a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/player/moment_player.png"
-dest_files=["res://.godot/imported/moment_player.png-d8e73501e9dad4889a7e4589331fcfb8.ctex"]
+source_file="res://assets/sprites/player/character_side.png"
+dest_files=["res://.godot/imported/character_side.png-bce3f74bb432e229d1c0c9d4b638c91a.ctex"]
 
 [params]
 

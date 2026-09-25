@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wvhyfy6w4rn4"
-path="res://.godot/imported/moment_player (2).png-10e34a2837910a5342ade68cf567f80e.ctex"
+uid="uid://c2qklg340h70w"
+path="res://.godot/imported/c96e7188-a80a-4c31-ad9d-1d2b8171e804.png-c21c89561cbf5bf548827e22c08c3e57.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/player/moment_player (2).png"
-dest_files=["res://.godot/imported/moment_player (2).png-10e34a2837910a5342ade68cf567f80e.ctex"]
+source_file="res://assets/sprites/player/c96e7188-a80a-4c31-ad9d-1d2b8171e804.png"
+dest_files=["res://.godot/imported/c96e7188-a80a-4c31-ad9d-1d2b8171e804.png-c21c89561cbf5bf548827e22c08c3e57.ctex"]
 
 [params]
 
