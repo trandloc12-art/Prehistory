@@ -1,7 +1,12 @@
 [gd_scene format=3 uid="uid://co6asu4apb585"]
 
-[ext_resource type="Script" uid="uid://dhsgev144hb3i" path="res://scripts/player/player.gd" id="1_wr5hl"]
+[ext_resource type="Script" uid="uid://dhsgev144hb3i" path="res://scripts/player/controller/player.gd" id="1_wr5hl"]
+[ext_resource type="Script" uid="uid://csmkb2lo341tv" path="res://scripts/player/player_data.gd" id="2_4kuee"]
 [ext_resource type="Texture2D" uid="uid://cwe4debhsqkud" path="res://assets/sprites/player/idle.png" id="2_gfjak"]
+
+[sub_resource type="Resource" id="Resource_o2c07"]
+script = ExtResource("2_4kuee")
+metadata/_custom_type_script = "uid://csmkb2lo341tv"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4kuee"]
 atlas = ExtResource("2_gfjak")
@@ -45,6 +50,7 @@ height = 38.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1273378771]
 script = ExtResource("1_wr5hl")
+data = SubResource("Resource_o2c07")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=450236426]
 scale = Vector2(0.1, 0.1)
