@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dptbtubi3svbx"
+<<<<<<<< HEAD:assets/sprites/player/character_side.png.import
+uid="uid://beh4pdm2kf2wg"
 path="res://.godot/imported/character_side.png-bce3f74bb432e229d1c0c9d4b638c91a.ctex"
+========
+uid="uid://ch4akv4h05gkm"
+path="res://.godot/imported/titleset_forest.png-b468d174a348e42f95f961e3b06801ca.ctex"
+>>>>>>>> 58b874276d9e47cb5cff13c54067e7277e5cacf0:assets/tilesets/forest/titleset_forest.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<<< HEAD:assets/sprites/player/character_side.png.import
 source_file="res://assets/sprites/player/character_side.png"
 dest_files=["res://.godot/imported/character_side.png-bce3f74bb432e229d1c0c9d4b638c91a.ctex"]
+========
+source_file="res://assets/tilesets/forest/titleset_forest.png"
+dest_files=["res://.godot/imported/titleset_forest.png-b468d174a348e42f95f961e3b06801ca.ctex"]
+>>>>>>>> 58b874276d9e47cb5cff13c54067e7277e5cacf0:assets/tilesets/forest/titleset_forest.png.import
 
 [params]
 

@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0vpp4fpqgiro"
+<<<<<<<< HEAD:assets/sprites/player/character_front_idle (1).png.import
+uid="uid://gjhdwhwxgor8"
 path="res://.godot/imported/character_front_idle (1).png-47fbdadeb02eee0f442609093857ddc4.ctex"
+========
+uid="uid://c6d0jy5xgcjtn"
+path="res://.godot/imported/titleset_forest_2.png-c04ef5799eebe296d978f3c7d76d635d.ctex"
+>>>>>>>> 58b874276d9e47cb5cff13c54067e7277e5cacf0:assets/tilesets/forest/titleset_forest_2.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<<< HEAD:assets/sprites/player/character_front_idle (1).png.import
 source_file="res://assets/sprites/player/character_front_idle (1).png"
 dest_files=["res://.godot/imported/character_front_idle (1).png-47fbdadeb02eee0f442609093857ddc4.ctex"]
+========
+source_file="res://assets/tilesets/forest/titleset_forest_2.png"
+dest_files=["res://.godot/imported/titleset_forest_2.png-c04ef5799eebe296d978f3c7d76d635d.ctex"]
+>>>>>>>> 58b874276d9e47cb5cff13c54067e7277e5cacf0:assets/tilesets/forest/titleset_forest_2.png.import
 
 [params]
 

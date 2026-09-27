@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://co6asu4apb585"]
 
 [ext_resource type="Script" uid="uid://dhsgev144hb3i" path="res://scripts/player/player.gd" id="1_wr5hl"]
-[ext_resource type="Texture2D" uid="uid://gjhdwhwxgor8" path="res://assets/sprites/player/character_front_idle (1).png" id="2_524rm"]
-[ext_resource type="Texture2D" uid="uid://beh4pdm2kf2wg" path="res://assets/sprites/player/character_side.png" id="3_tpg5x"]
+[ext_resource type="Texture2D" uid="uid://c0vpp4fpqgiro" path="res://assets/sprites/player/character_front_idle (1).png" id="2_524rm"]
+[ext_resource type="Texture2D" uid="uid://dptbtubi3svbx" path="res://assets/sprites/player/character_side.png" id="3_tpg5x"]
 [ext_resource type="Texture2D" uid="uid://c2qklg340h70w" path="res://assets/sprites/player/c96e7188-a80a-4c31-ad9d-1d2b8171e804.png" id="4_524rm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_npwbq"]
@@ -120,8 +120,9 @@ scale = Vector2(0.1, 0.1)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1395604432]
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_3r14f")
+animation = &"walk_side"
 autoplay = "walk_side"
-frame_progress = 0.16805753
+frame_progress = 0.6928503
 speed_scale = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1955954556]
