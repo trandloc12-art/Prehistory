@@ -31,7 +31,7 @@ extends CharacterBody2D
 #         (BẮT BUỘC phải gán, nếu không _ready() sẽ lỗi Nil ở move_speed)
 
 # --- Node references (xem Technical Architecture mục 4) ---
-@onready var sprite: Sprite2D = $Sprite2D
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var collision_shape: CollisionShape2D = $CollisionShape2D
 @onready var animation_player: AnimationPlayer = get_node_or_null("AnimationPlayer")
 # TODO 0b: attack_area/health CHƯA gắn trong scene — dùng get_node_or_null
@@ -97,6 +97,15 @@ func movement() -> void:
 	var input_direction := Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	# TODO 10: velocity = movement_model.calculate_movement(input_direction)
 	velocity = movement_model.calculate_movement(input_direction)
+
+	# TODO 10b: Model chỉ TÍNH hướng quay (bool), player.gd là nơi ÁP DỤNG
+	#           lên Node Sprite2D thật — Model không được biết Node (xem
+	#           ghi chú trong movement_model.gd: calculate_facing_direction()).
+	var facing_right := movement_model.calculate_facing_direction(input_direction)
+	# Sprite gốc vẽ mặc định hướng PHẢI -> flip_h = true khi đang hướng TRÁI
+	sprite.flip_h = not facing_right
+	print(input_direction.x, " -> ", facing_right, " -> flip_h=", sprite.flip_h)
+	
 	# TODO 11: cập nhật current_state:
 	#          - velocity != Vector2.ZERO -> State.MOVING
 	#          - ngược lại -> State.IDLE
